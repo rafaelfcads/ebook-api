@@ -1,6 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
+const httpPort = process.env.PORT || 3000;
+
 const corsOptions = {
   origin: ["http://example1.com", /\.example2\.com$/],
   optionsSuccessStatus: 204,
@@ -9,6 +11,6 @@ const corsOptions = {
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors(corsOptions);
-  await app.listen(3000);
+  await app.listen(httpPort);
 }
 bootstrap();
