@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 const httpPort = process.env.PORT || 3000;
 
 const corsOptions = {
-  origin: ["http://example1.com", /\.example2\.com$/],
+  origin: ['http://example1.com'],
   optionsSuccessStatus: 204,
 };
 
