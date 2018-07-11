@@ -3,6 +3,8 @@ import {
   Query,
   Mutation,
   Resolver,
+  DelegateProperty,
+  Subscription,
 } from '@nestjs/graphql';
 
 import { User } from './interfaces/user.interface';
