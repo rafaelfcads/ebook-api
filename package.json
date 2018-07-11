@@ -20,11 +20,12 @@
     "rxjs": "^6.0.0",
     "subscriptions-transport-ws": "^0.9.5",
     "typescript": "^2.8.0",
-    "ws": "^4.0.0"
-  },
-  "devDependencies": {
+    "ws": "^4.0.0",
     "@types/node": "^7.0.41",
     "ts-node": "^6.0.0",
     "tslint": "^5.9.1"
+  },
+  "engines": {
+    "node": "10.4.0"
   }
 }
