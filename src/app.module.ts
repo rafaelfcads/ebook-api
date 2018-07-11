@@ -1,8 +1,8 @@
 import { Module, MiddlewareConsumer, NestModule } from '@nestjs/common';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
 import { GraphQLModule, GraphQLFactory } from '@nestjs/graphql';
-import { HelmetMiddleware } from '@nest-middlewares/helmet';
-import { CompressionMiddleware } from '@nest-middlewares/compression';
+// import { HelmetMiddleware } from '@nest-middlewares/helmet';
+// import { CompressionMiddleware } from '@nest-middlewares/compression';
 
 import { UsersModule } from './users/users.module';
 
