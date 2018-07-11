@@ -4,14 +4,10 @@ import { GraphQLModule, GraphQLFactory } from '@nestjs/graphql';
 import { HelmetMiddleware } from '@nest-middlewares/helmet';
 import { CompressionMiddleware } from '@nest-middlewares/compression';
 
-import { AppController } from 'app.controller';
-import { AppService } from 'app.service';
 import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [UsersModule, GraphQLModule],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule implements NestModule {
 

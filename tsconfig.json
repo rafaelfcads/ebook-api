@@ -12,7 +12,12 @@
     "sourceMap": true,
     "allowJs": true,
     "outDir": "./dist",
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "lib": [
+      "es6",
+      "dom",
+      "esnext"
+    ]
   },
   "include": [
     "src/**/*"
