@@ -18,12 +18,6 @@ export class AppModule implements NestModule {
     const typeDefs = this.graphQLFactory.mergeTypesByPaths('./**/*.graphql');
     const schema = this.graphQLFactory.createSchema({ typeDefs });
 
-    console.log('***** GRAPHQL typeDefs *********');
-    console.log(typeDefs);
-
-    console.log('***** GRAPHQL schema *********');
-    console.log(schema);
-
     consumer
       // .apply(HelmetMiddleware).forRoutes('*')
       // .apply(CompressionMiddleware).forRoutes('*')
