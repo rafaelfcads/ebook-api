@@ -8,12 +8,14 @@ import { MongooseModule } from '@nestjs/mongoose'
 import { UsersModule } from './users/users.module';
 import { HealthCheckModule } from './health-check/health.check.module';
 
+const mongo = process.env.MONGO_DB || 'mongodb://localhost:27017/healthcare';
+
 @Module({
   imports: [
     UsersModule,
     GraphQLModule,
     HealthCheckModule,
-    MongooseModule.forRoot('mongodb://localhost:27017/healthcare'),
+    MongooseModule.forRoot(mongo),
   ],
 })
 export class AppModule implements NestModule {
