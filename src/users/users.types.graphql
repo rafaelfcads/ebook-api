@@ -11,4 +11,5 @@ type User {
   id: Int
   name: String
   specialty: String
+  email: String
 }
