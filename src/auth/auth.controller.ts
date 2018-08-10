@@ -11,9 +11,4 @@ export class AuthController {
     return await this.authService.createToken();
   }
 
-  @Get('/data')
-  @UseGuards(AuthGuard('jwt'))
-  findAll() {
-    // this route is restricted
-  }
 }
