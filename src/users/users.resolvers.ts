@@ -1,10 +1,9 @@
-import { Injectable, UseGuards } from '@nestjs/common';
+import { UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 import {
   Query,
   Mutation,
   Resolver,
-  DelegateProperty,
-  Subscription,
 } from '@nestjs/graphql';
 
 import { User } from './interfaces/user.interface';
@@ -12,11 +11,11 @@ import { UsersService } from './users.service';
 import { UsersGuard } from './users.guard';
 
 @Resolver('User')
+@UseGuards(AuthGuard('jwt'))
 export class UsersResolvers {
   constructor(private readonly usersService: UsersService) {}
 
   @Query()
-  @UseGuards(UsersGuard)
   async getUsers() {
     return await this.usersService.findAll();
   }
