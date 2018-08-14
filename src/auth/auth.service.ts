@@ -9,7 +9,7 @@ export class AuthService {
 
   async createToken() {
     const user: JwtPayload = { email: 'user@email.com' };
-    return jwt.sign(user, 'secretKey', { expiresIn: 3600 });
+    return jwt.sign(user, new Buffer(process.env.SECRET, 'base64'), { expiresIn: 3600 });
   }
 
   async validateUser(payload: JwtPayload): Promise<any> {
