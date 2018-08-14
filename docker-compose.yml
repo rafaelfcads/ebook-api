@@ -1,0 +1,9 @@
+version: "3"
+services:
+  mongo:
+    container_name: health_care_mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
