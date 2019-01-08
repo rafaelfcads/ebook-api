@@ -1,7 +1,7 @@
 {
-  "name": "health-care-api",
+  "name": "ebooks-api",
   "version": "0.0.0",
-  "description": "Health Care API",
+  "description": "Ebooks API",
   "author": "Rafael Ferreira Reis",
   "license": "MIT",
   "scripts": {

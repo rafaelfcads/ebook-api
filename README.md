@@ -1,8 +1,8 @@
-# health-care-api
+# ebooks-api
 
 ## Description
 
-Health Care API
+Nest Project API + Graphql
 
 ## Installation
 
